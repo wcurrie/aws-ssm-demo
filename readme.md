@@ -2,6 +2,14 @@
 
 Pull some configuration for a spring boot app out of AWS' EC2 parameter store. The config is a database password encrypted using KMS.
 
+## Background
+
+AWS [blog](https://aws.amazon.com/blogs/compute/managing-secrets-for-amazon-ecs-applications-using-parameter-store-and-iam-roles-for-tasks/) describes the Parameter Store component of the Systems Manager:
+
+> you can also use it as a generic secret management store
+
+Another [post](https://stelligent.com/2017/03/09/using-parameter-store-with-aws-codepipeline/) describes populating the secrets (or other config) from a build pipeline.
+
 ## Approach
 
 Use [PropertySourceLocator](https://github.com/spring-cloud/spring-cloud-commons/blob/master/spring-cloud-context/src/main/java/org/springframework/cloud/bootstrap/config/PropertySourceLocator.java) from spring-cloud-commons.
