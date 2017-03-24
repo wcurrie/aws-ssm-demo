@@ -37,6 +37,7 @@ public class AwsSsmDemoApplication {
 			for (Person person : repository.findAll()) {
 				System.out.println(person);
 			}
+            System.out.println("SUCCESS!");
 		};
 	}
 }
